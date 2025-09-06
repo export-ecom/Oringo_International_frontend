@@ -1,0 +1,115 @@
+/* Page Wrapper */
+.checkout-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+.checkout-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 25px;
+}
+
+.checkout-page h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #0984e3;
+  border-left: 4px solid #0984e3;
+  padding-left: 10px;
+}
+
+/* Customer Form */
+.customer-form {
+  margin-bottom: 30px;
+  background: #f9fbfd;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.customer-form input,
+.customer-form textarea,
+.customer-form select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus,
+.customer-form select:focus {
+  border-color: #0984e3;
+  outline: none;
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.3);
+}
+
+.customer-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Order Summary */
+.order-summary {
+  background: #fdfefe;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.order-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.order-item:hover {
+  background: #f7faff;
+}
+
+.order-item p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.order-summary p {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #20b954;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(1px);
+}

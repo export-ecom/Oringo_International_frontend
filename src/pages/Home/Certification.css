@@ -1,0 +1,112 @@
+/* Section */
+.certifications-section {
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Title */
+.certifications-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  gap: 175px;
+  animation: scroll 75s linear infinite;
+  width: max-content;
+}
+
+.track.paused {
+  animation-play-state: paused;
+}
+
+/* Card */
+.logo-card {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.logo-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 3px solid #7efceb;
+}
+
+.logo-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.logo-container:hover {
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
+}
+
+.logo-container:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Label */
+.logo-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+/* Scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-card {
+    margin: 0 15px;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-container img {
+    width: 75px;
+    height: 75px;
+  }
+}

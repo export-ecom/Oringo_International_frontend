@@ -1,0 +1,92 @@
+/* Section Background */
+.team-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: background 0.5s ease-in-out;
+}
+
+/* Section Title */
+.team-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3.5rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.team-card {
+  background: rgba(255, 255, 255, 0.15);
+  /* glassy look */
+  backdrop-filter: blur(12px);
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #7efceb, #2ca9f1);
+}
+
+/* Avatar with hover zoom & shadow */
+.avatar-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card:hover .avatar-container {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Name & Role */
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Change paragraph text color to black on section hover */
+.section:hover .text {
+  color: #000000;
+  transition: color 0.3s ease;
+}

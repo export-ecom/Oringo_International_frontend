@@ -1,0 +1,181 @@
+/* ===== FIX HEADER OVERLAP ===== */
+header {
+  position: relative;
+  z-index: 9999; /* Always above everything */
+}
+
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1;
+}
+.page-container header {
+  position: relative;
+  z-index: 9999; /* Force header above everything */
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Keep contact section below header */
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.contactSection {
+  padding: 50px 30px;
+  min-height: 100vh;
+
+  /* Gradient + Bubble Background */
+  background: linear-gradient(135deg, #7dd3fc, #c084fc, #f472b6);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add floating bubbles */
+.contactSection::before,
+.contactSection::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  filter: blur(30px);
+  z-index: 0;
+  animation: float 8s infinite ease-in-out;
+}
+
+.contactSection::before {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 15%;
+}
+
+.contactSection::after {
+  width: 150px;
+  height: 150px;
+  bottom: 15%;
+  right: 10%;
+}
+
+/* ===== CONTACT CONTAINER ===== */
+.container {
+  position: relative;
+  z-index: 2; /* Keeps content above bubbles */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* ===== CONTACT TITLE ===== */
+.contactTitle {
+  text-align: center;
+  color: #000000;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== CONTACT GRID ===== */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SUBTITLE ===== */
+.contactSubtitle {
+  text-align: center;
+  color: #041d1d;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.contactSubtitle:hover {
+  color: rgb(39, 148, 238);
+  transform: scale(1.03);
+}
+
+/* ===== HEADER ROW & WHATSAPP BUTTON ===== */
+.contactHeaderRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.contactHeading {
+  margin: 0;
+  color: #3f3b3b;
+}
+
+.btnWhatsApp {
+  position: absolute;
+  right: 0;
+  background: #25D366;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.btnWhatsApp:hover {
+  background: #14f868;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 255, 94, 0.3);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactHeaderRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btnWhatsApp {
+    position: static;
+    margin: 10px auto 0;
+    display: inline-block;
+  }
+}

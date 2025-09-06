@@ -1,0 +1,42 @@
+.testimonials-section {
+  background: transparent; /* let the parallax bg show */
+  color: #fff;
+  border-radius:10px
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1); /* transparent white for glass effect */
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  backdrop-filter: blur(6px); /* frosted glass effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff; /* white border for dark bg */
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  color: #f1f1f1; /* light text */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.testimonial-card h5 {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #fff;
+}

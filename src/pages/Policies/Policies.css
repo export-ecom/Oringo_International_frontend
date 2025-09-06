@@ -1,0 +1,9 @@
+/* src/pages/Policies/Policies.css */
+.container {
+    max-width: 900px;
+}
+
+h1,
+h5 {
+    font-weight: bold;
+}

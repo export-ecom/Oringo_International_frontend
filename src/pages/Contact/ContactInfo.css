@@ -1,0 +1,36 @@
+.contactInfo {
+  background: #f9f9f9;
+  color: rgb(31, 25, 25);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: fadeInRight 0.8s ease forwards;
+  position: relative;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 600px) {
+  .contactInfo {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+
+
+.contactInfo:hover {
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
