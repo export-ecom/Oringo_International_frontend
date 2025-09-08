@@ -21,16 +21,22 @@ const About = () => {
             </b>
           </p>
 
-
-
-
-
           {/* Modular Subsections */}
-          <Wwo />
-          <Wcu />
-          <Mission />
-          <Team />
-          <History />
+          <div className={styles.section}>
+            <Wwo />
+          </div>
+          <div className={styles.section}>
+            <Wcu />
+          </div>
+          <div className={styles.section}>
+            <Mission />
+          </div>
+          <div className={styles.section}>
+            <Team />
+          </div>
+          <div className={styles.section}>
+            <History />
+          </div>
         </div>
       </main>
       <Footer />

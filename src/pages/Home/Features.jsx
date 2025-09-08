@@ -6,11 +6,10 @@ function Features() {
         { title: "Fast", desc: "Experience blazing fast performance." },
         { title: "Reliable", desc: "Our service is available 24/7." },
         { title: "User-Friendly", desc: "Simple and intuitive design." },
+        { title: "Secure", desc: "Your data and transactions are fully protected." },
     ];
 
-    // Track scroll offset for subtle parallax
     const [scrollOffsets, setScrollOffsets] = useState(features.map(() => 0));
-    // Track rotation & scale for each card
     const [hoverStyles, setHoverStyles] = useState(
         features.map(() => ({ rotateX: 0, rotateY: 0, scale: 1 }))
     );

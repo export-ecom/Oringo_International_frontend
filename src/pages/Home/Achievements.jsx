@@ -9,7 +9,6 @@ export default function Achievements() {
     { number: 1000, suffix: "+", label: "Products Delivered" },
   ];
 
-  // Count-up effect
   const [counts, setCounts] = useState(data.map(() => 0));
 
   useEffect(() => {
@@ -32,10 +31,10 @@ export default function Achievements() {
 
   return (
     <section className="achievements">
-      <h2 className="achievements-title">Our Achievements</h2>
+      <h2 className="achievements-title fade-in">Our Achievements</h2>
       <div className="achievements-container">
         {data.map((item, index) => (
-          <div className="achievement-card" key={index}>
+          <div className="achievement-card fade-in-delay" key={index} style={{ animationDelay: `${index * 0.2}s` }}>
             <h2 className="achievement-number">
               {counts[index]}
               {item.suffix}

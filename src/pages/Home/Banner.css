@@ -1,7 +1,17 @@
-/* Section */
+/* Wrapper container remains centered and overflow hidden */
+.banner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Keep full desktop styling */
 .banner-section {
     position: relative;
     min-height: 60vh;
+    max-width: 1200px;
+    width: 100%;
     padding: 80px 20px;
     border-radius: 24px;
     overflow: hidden;
@@ -13,7 +23,22 @@
     animation: gradientBackground 12s ease infinite alternate;
 }
 
-/* Animated gradient background */
+/* Use scaling without distortion */
+@media (max-width: 768px) {
+    .banner-container {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+}
+
+/* Animation remains unchanged */
 @keyframes gradientBackground {
     0% {
         background: linear-gradient(135deg, #867a7a, #eaeaea);
@@ -28,7 +53,6 @@
     }
 }
 
-/* Decorative floating circles */
 .banner-section::before,
 .banner-section::after {
     content: "";
@@ -55,7 +79,6 @@
     animation-duration: 10s;
 }
 
-/* Highlighted text */
 .highlight {
     background: linear-gradient(90deg, #ffc107, #ff9800);
     -webkit-background-clip: text;
@@ -63,7 +86,6 @@
     text-shadow: 2px 2px 20px rgba(255, 152, 0, 0.7);
 }
 
-/* Fade-in animation */
 .fade-in {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
@@ -86,7 +108,6 @@
     }
 }
 
-/* Modern 3D-like button */
 .btn-modern {
     background: linear-gradient(90deg, #ffc107, #ff9800);
     color: #212529;
@@ -105,7 +126,6 @@
     filter: brightness(1.1);
 }
 
-/* Decorative floating animation */
 @keyframes floatUpDown {
 
     0%,
@@ -115,22 +135,5 @@
 
     50% {
         transform: translateY(-20px) rotate(15deg);
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .banner-section {
-        padding: 60px 20px;
-        min-height: 50vh;
-    }
-
-    .display-3 {
-        font-size: 2rem;
-    }
-
-    .btn-modern {
-        font-size: 1rem;
-        padding: 0.7rem 2rem;
     }
 }

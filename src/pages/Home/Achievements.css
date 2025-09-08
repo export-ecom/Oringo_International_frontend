@@ -16,14 +16,17 @@
   color: #fff;
   margin-bottom: 50px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
 }
 
 /* Grid */
 .achievements-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Desktop 4 per row */
   gap: 2.5rem;
+  justify-items: center;
 }
 
 /* Card */
@@ -34,11 +37,13 @@
   padding: 2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
 }
 
 .achievement-card:hover {
@@ -63,15 +68,46 @@
   line-height: 1.4;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .achievement-card {
-    width: 45%;
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@media (max-width: 480px) {
+/* Responsive grid adjustments */
+@media (max-width: 992px) {
+  .achievements-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 on tablets */
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievements-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 on mobile */
+    gap: 1rem;
+  }
+
   .achievement-card {
-    width: 90%;
+    width: 100%;
+    max-width: 150px;
+    padding: 1.5rem 1rem;
+  }
+
+  .achievement-number {
+    font-size: 1.8rem;
+  }
+
+  .achievement-label {
+    font-size: 0.9rem;
   }
 }

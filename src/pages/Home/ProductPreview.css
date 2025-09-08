@@ -1,25 +1,63 @@
-/* Section Background */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .catalogue-preview {
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
   border-radius: 24px;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   transition: background 0.5s ease-in-out;
 }
 
-/* Section Heading */
 .catalogue-heading {
   color: #ffffff;
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-/* Card */
+/* Grid layout */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Desktop → 4 columns, large tablet → 3 columns, tablet/mobile → 2 columns */
+@media (max-width: 1200px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* keep 2 × 2 on small screens */
+    gap: 1rem;
+  }
+}
+
+/* Card Styles */
 .catalogue-card {
   background: #ffffff20;
-  /* glassy look */
   backdrop-filter: blur(10px);
   border-radius: 20px;
   overflow: hidden;
@@ -36,7 +74,6 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Image Container with subtle zoom + overlay */
 .img-container {
   overflow: hidden;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -44,7 +81,7 @@
 
 .catalogue-img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
@@ -54,7 +91,6 @@
   filter: brightness(1.1);
 }
 
-/* Card Body */
 .catalogue-body {
   flex: 1;
   display: flex;
@@ -64,7 +100,6 @@
   text-align: center;
 }
 
-/* Title & Description */
 .catalogue-title {
   font-size: 1.2rem;
   font-weight: 700;
@@ -79,7 +114,6 @@
   flex-grow: 1;
 }
 
-/* Button */
 .catalogue-btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
@@ -99,4 +133,44 @@
   background: linear-gradient(135deg, #ff4b2b, #ff416c);
   transform: translateY(-4px) scale(1.08);
   box-shadow: 0 12px 28px rgba(255, 65, 108, 0.5), 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .catalogue-img {
+    height: 180px;
+  }
+
+  .catalogue-title {
+    font-size: 1.1rem;
+  }
+
+  .catalogue-desc {
+    font-size: 0.9rem;
+  }
+
+  .catalogue-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogue-img {
+    height: 150px;
+  }
+
+  .catalogue-title {
+    font-size: 1rem;
+  }
+
+  .catalogue-desc {
+    font-size: 0.45rem;
+  }
+
+  .catalogue-btn {
+    font-size: 0.9rem;
+  }
+
 }

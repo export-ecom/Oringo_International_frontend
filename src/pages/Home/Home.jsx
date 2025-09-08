@@ -5,7 +5,6 @@ import Button from '../../components/Button/Button';
 import Header from "../../components/Header/Header";
 import AIAssistant from "../../components/AIAssistant/AIAssistant";
 import Footer from "../../components/Footer/Footer";
-import Banner from "./Banner";
 import Features from "./Features";
 import Testimonials from "./Testimonials";
 import AboutPreview from "./AboutPreview";
@@ -21,20 +20,18 @@ import { useAuth } from "../../context/AuthContext";
 function Home() {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+
   return (
     <>
       <Header />
       <main className="home-container">
-        {/* <Banner /> */}
 
-        {/* 3D Cinematic Parallax Section */}
+        {/* Parallax Section */}
         <section className="parallax-section">
-          {/* Background layers */}
           <div className="parallax-layer layer1"></div>
           <div className="parallax-layer layer2"></div>
           <div className="parallax-layer layer3"></div>
 
-          {/* Animated Overlay */}
           <motion.div
             className="overlay text-center"
             initial={{ opacity: 0, y: 50 }}
@@ -49,7 +46,7 @@ function Home() {
             <p className="text-light subtitle-animate">
               Your one-stop solution for Exporting products.
             </p>
-            <div>
+            <div className="btn-wrapper">
               {user ? (
                 <Button className="btn-lg btn-modern" onClick={logout}>
                   Logout
@@ -60,7 +57,6 @@ function Home() {
                 </Button>
               )}
             </div>
-
           </motion.div>
         </section>
 
@@ -68,7 +64,6 @@ function Home() {
         <div className="gradient-separator"></div>
         <ProductPreview />
         <div className="gradient-separator"></div>
-
 
         <DynamicMap />
 
@@ -78,8 +73,7 @@ function Home() {
 
         <div className="gradient-separator"></div>
 
-        {/* Testimonials in Parallax */}
-        <section className="parallax-section parallax-alt slim-parallax">
+        <section className="parallax-section parallax-alt slim-parallax testimonial-bg">
           <motion.div
             className="overlay"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -94,6 +88,7 @@ function Home() {
             </div>
           </motion.div>
         </section>
+
         <div className="gradient-separator"></div>
 
         <Achievements />
@@ -105,6 +100,7 @@ function Home() {
         <div className="d-flex justify-content-center my-4">
           {/* <AIAssistant /> */}
         </div>
+
       </main>
       <Footer />
     </>

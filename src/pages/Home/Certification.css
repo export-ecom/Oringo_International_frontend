@@ -16,7 +16,6 @@
   color: #fff;
   margin-bottom: 50px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-  position: relative;
 }
 
 /* Marquee */
@@ -29,7 +28,7 @@
 .track {
   display: flex;
   gap: 175px;
-  animation: scroll 75s linear infinite;
+  animation: scroll 60s linear infinite;
   width: max-content;
 }
 
@@ -68,7 +67,7 @@
 
 /* Hover effects */
 .logo-container:hover {
-  transform: scale(1.15);
+  transform: scale(1.15) rotate(-2deg);
   box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
 }
 
@@ -81,6 +80,7 @@
   font-size: 1rem;
   color: #e0e0e0;
   font-weight: 600;
+  margin-top: 8px;
 }
 
 /* Scroll animation */
@@ -95,18 +95,78 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .logo-card {
-    margin: 0 15px;
+@media (max-width: 992px) {
+  .track {
+    gap: 120px;
   }
 
   .logo-container {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
 
   .logo-container img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .track {
+    gap: 80px;
+  }
+
+  .logo-container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .logo-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .track {
+    gap: 50px;
+  }
+
+  .logo-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-container img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo-card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .track {
+    gap: 40px;
+  }
+
+  .logo-container {
     width: 75px;
     height: 75px;
+  }
+
+  .logo-container img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-card p {
+    font-size: 0.75rem;
   }
 }

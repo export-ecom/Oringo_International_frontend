@@ -1,5 +1,5 @@
 import React from "react";
-import "./Testimonials.css"; 
+import "./Testimonials.css";
 
 const testimonials = [
   {
@@ -17,21 +17,26 @@ const testimonials = [
     feedback: "Very professional and reliable team.",
     image: "https://randomuser.me/api/portraits/men/12.jpg",
   },
+  {
+    name: "Sarah Khan",
+    feedback: "Excellent quality and fast delivery!",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+  },
 ];
 
 function Testimonials() {
   return (
     <section className="testimonials-section py-5 text-center">
-      <div className="d-flex justify-content-center gap-4 flex-wrap">
+      <div className="testimonials-grid">
         {testimonials.map((t, index) => (
           <div className="testimonial-card" key={index}>
             <img
               src={t.image}
               alt={t.name}
-              className="testimonial-avatar mb-3"
+              className="testimonial-avatar"
             />
-            <p className="mb-3 fst-italic">"{t.feedback}"</p>
-            <span className="fw-bold text-secondary">- {t.name}</span>
+            <p className="testimonial-feedback">"{t.feedback}"</p>
+            <span className="testimonial-name">- {t.name}</span>
           </div>
         ))}
       </div>

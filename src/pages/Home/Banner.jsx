@@ -7,22 +7,24 @@ function Banner() {
     const navigate = useNavigate();
 
     return (
-        <section className="banner-section text-white text-center d-flex flex-column justify-content-center align-items-center">
-            <div className="banner-content">
-                <h1 className="display-3 fw-bold mb-3 fade-in">
-                    Welcome to <span className="highlight">Oringo International</span>
-                </h1>
-                <p className="lead mb-4 fade-in-delay">
-                    Sustainable. Global. Trusted.
-                </p>
-                <Button
-                    className="btn-lg btn-modern"
-                    onClick={() => navigate("/auth")}
-                >
-                    Login/Register
-                </Button>
-            </div>
-        </section>
+        <div className="banner-container">
+            <section className="banner-section text-white text-center d-flex flex-column justify-content-center align-items-center">
+                <div className="banner-content">
+                    <h1 className="display-3 fw-bold mb-3 fade-in">
+                        Welcome to <span className="highlight">Oringo International</span>
+                    </h1>
+                    <p className="lead mb-4 fade-in-delay">
+                        Sustainable. Global. Trusted.
+                    </p>
+                    <Button
+                        className="btn-lg btn-modern"
+                        onClick={() => navigate("/auth")}
+                    >
+                        Login/Register
+                    </Button>
+                </div>
+            </section>
+        </div>
     );
 }
 
