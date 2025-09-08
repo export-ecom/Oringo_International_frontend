@@ -14,7 +14,7 @@ function AboutPreview() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * 12; // more dynamic
+    const rotateX = ((y - centerY) / centerY) * 12;
     const rotateY = ((x - centerX) / centerX) * 12;
 
     setStyle({
@@ -32,21 +32,21 @@ function AboutPreview() {
 
   return (
     <section className="about-preview my-5">
-      <div className="row align-items-center">
+      <div className="about-content">
         <div
-          className="col-md-6 text-center mb-4 mb-md-0 overflow-visible"
+          className="about-img-wrapper"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
           <img
             src={abt}
             alt="About Us"
-            className="about-img img-fluid rounded shadow"
+            className="about-img"
             style={style}
           />
         </div>
 
-        <div className="col-md-6 text-md-start text-center">
+        <div className="about-text-wrapper">
           <h2 className="fw-bold mb-3 fade-in">About Us</h2>
           <p className="about-text fade-in-delay">
             Welcome to our export-focused marketplace, your trusted destination

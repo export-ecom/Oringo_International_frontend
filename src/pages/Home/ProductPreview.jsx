@@ -6,7 +6,6 @@ import img2 from "../../assets/Product2.jpg";
 import img3 from "../../assets/Handicraft.jpg";
 import img4 from "../../assets/product4.jpg";
 
-// category data (replace with dynamic later if needed)
 const categories = [
   {
     name: "Foods",
@@ -34,23 +33,21 @@ function ProductCataloguePreview() {
   return (
     <section className="catalogue-preview my-5">
       <h2 className="catalogue-heading text-center mb-5">Our Products</h2>
-      <div className="row g-4">
+      <div className="catalogue-grid">
         {categories.map((cat) => (
-          <div className="col-md-6 col-lg-3" key={cat.name}>
-            <div className="catalogue-card">
-              <div className="img-container">
-                <img src={cat.image} alt={cat.name} className="catalogue-img" />
-              </div>
-              <div className="catalogue-body">
-                <h5 className="catalogue-title">{cat.name}</h5>
-                <p className="catalogue-desc">{cat.description}</p>
-                <Link
-                  to={`/products?category=${encodeURIComponent(cat.name)}`}
-                  className="catalogue-btn"
-                >
-                  View Products
-                </Link>
-              </div>
+          <div className="catalogue-card" key={cat.name}>
+            <div className="img-container">
+              <img src={cat.image} alt={cat.name} className="catalogue-img" />
+            </div>
+            <div className="catalogue-body">
+              <h5 className="catalogue-title">{cat.name}</h5>
+              <p className="catalogue-desc">{cat.description}</p>
+              <Link
+                to={`/products?category=${encodeURIComponent(cat.name)}`}
+                className="catalogue-btn"
+              >
+                View Products
+              </Link>
             </div>
           </div>
         ))}

@@ -1,30 +1,30 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import companyLogo from "../../assets/logoOrg1.png";
-import "./Footer.css"; // Import the CSS file
+import "./Footer.css";
 
 function Footer() {
     return (
-        <footer className="footer bg-dark text-white pt-5 pb-3 mt-5">
-            <div className="container">
-                <div className="row text-center text-md-start">
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-grid">
 
                     {/* Logo & Company Info */}
-                    <div className="col-md-3 mb-4">
+                    <div className="footer-col">
                         <img
                             src={companyLogo}
                             alt="Oringo International"
-                            className="footer-logo mb-3"
+                            className="footer-logo"
                         />
-                        <p className="small text-secondary footer-desc">
+                        <p className="footer-desc">
                             Oringo International brings you premium products and seamless shopping experiences.
                         </p>
                     </div>
 
                     {/* Quick Links */}
-                    <div className="col-md-3 mb-4">
-                        <h5 className="footer-title mb-3">Quick Links</h5>
-                        <ul className="list-unstyled footer-links">
+                    <div className="footer-col">
+                        <h5 className="footer-title">Quick Links</h5>
+                        <ul className="footer-links">
                             <li><a href="/products" className="footer-link">Products</a></li>
                             <li><a href="/about" className="footer-link">About Us</a></li>
                             <li><a href="/blog" className="footer-link">Blog</a></li>
@@ -32,8 +32,8 @@ function Footer() {
                     </div>
 
                     {/* Contact Section */}
-                    <div className="col-md-3 mb-4">
-                        <h5 className="footer-title mb-3">Contact Us</h5>
+                    <div className="footer-col">
+                        <h5 className="footer-title">Contact Us</h5>
                         <p className="footer-contact">
                             <FaPhoneAlt className="me-2" /> +91 9637104850
                         </p>
@@ -43,9 +43,9 @@ function Footer() {
                     </div>
 
                     {/* Policy Links */}
-                    <div className="col-md-3 mb-4">
-                        <h5 className="footer-title mb-3">Policies</h5>
-                        <ul className="list-unstyled footer-links">
+                    <div className="footer-col">
+                        <h5 className="footer-title">Policies</h5>
+                        <ul className="footer-links">
                             <li><a href="/faq" className="footer-link">FAQ</a></li>
                             <li><a href="/terms" className="footer-link">Terms & Conditions</a></li>
                             <li><a href="/shipping" className="footer-link">Shipping & Return Policy</a></li>
@@ -55,9 +55,9 @@ function Footer() {
                 </div>
 
                 {/* Bottom Footer */}
-                <div className="text-center mt-4">
-                    <hr className="border-secondary" />
-                    <p className="mb-0 small">© Oringo International. All rights reserved.</p>
+                <div className="footer-bottom">
+                    <hr />
+                    <p>© Oringo International. All rights reserved.</p>
                 </div>
             </div>
         </footer>

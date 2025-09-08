@@ -1,12 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Section */
 .features-section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   border-radius: 24px;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   perspective: 1200px;
-  /* For 3D tilt */
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 /* Heading */
@@ -14,9 +24,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 60px;
-  position: relative;
-  display: inline-block;
+  margin-bottom: 40px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -32,15 +40,33 @@
 
 /* Grid */
 .features-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Mobile: 2 per row for 2x2 layout */
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
 }
 
 /* Card */
 .feature-card {
-  width: 250px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: 20px;
@@ -53,6 +79,7 @@
   align-items: center;
   opacity: 0;
   animation: fadeInUp 0.8s forwards;
+  height: 100%;
 }
 
 .feature-card:nth-child(1) {
@@ -67,11 +94,14 @@
   animation-delay: 0.8s;
 }
 
+.feature-card:nth-child(4) {
+  animation-delay: 1s;
+}
+
 .feature-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* Feature Icon */
 .feature-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -84,12 +114,12 @@
   color: #7efceb;
 }
 
-/* Text */
 .feature-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 .feature-card p {
@@ -99,7 +129,7 @@
   text-align: center;
 }
 
-/* FadeIn Animation */
+/* Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -113,8 +143,37 @@
     font-size: 2rem;
   }
 
+  .feature-icon {
+    font-size: 1.7rem;
+  }
+
   .feature-card {
-    width: 100%;
-    max-width: 300px;
+    padding: 1.5rem 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-heading {
+    font-size: 1.8rem;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
   }
 }

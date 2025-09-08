@@ -24,9 +24,15 @@ const BlogList = () => {
     <>
       <Header />
       <div className="blog-container">
-        <SEO title="Blog & News | TickHive" description="Latest updates and stories from TickHive" />
+        <SEO
+          title="Blog & News | TickHive"
+          description="Latest updates and stories from TickHive"
+        />
+
         <h1 className="blog-title">📰 Blog & News</h1>
-        <p className="blog-subtitle">Stay updated with the latest insights, trends, and announcements</p>
+        <p className="blog-subtitle">
+          Stay updated with the latest insights, trends, and announcements
+        </p>
 
         <div className="blog-grid">
           {currentPosts.map((post, index) => (

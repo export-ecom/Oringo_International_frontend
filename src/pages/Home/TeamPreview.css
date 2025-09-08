@@ -17,13 +17,29 @@
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Grid */
+/* Grid layout */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 2 x 2 grid */
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 /* Card */
@@ -34,13 +50,16 @@
   padding: 2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  /* equal height cards */
 }
 
+/* Hover effect */
 .team-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -60,7 +79,6 @@
 .team-card:hover .avatar-container {
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-
 }
 
 .team-avatar {
@@ -84,4 +102,43 @@
   color: #e0e0e0;
   text-align: center;
   line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .avatar-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+  }
+
+  .team-role {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .avatar-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+
+  .team-role {
+    font-size: 0.9rem;
+  }
 }
