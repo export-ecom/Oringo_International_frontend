@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import "./QuotationForm.css";
 
 export default function QuotationForm({ categories, products }) {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ export default function QuotationForm({ categories, products }) {
   });
 
   const handleChange = (e) => {
+<<<<<<< HEAD
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -62,6 +64,25 @@ export default function QuotationForm({ categories, products }) {
       )
     : products;
 
+=======
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Quotation Request:", formData);
+    alert("Quotation request submitted!");
+  };
+
+  // Filter products based on selected category
+  const filteredProducts =
+    formData.category && formData.category !== "All"
+      ? products.filter((p) => p.category === formData.category)
+      : products;
+>>>>>>> b600972 (feat: add internship frontend code for Oringo project)
 
   return (
     <div className="quotation-form-container">
@@ -108,8 +129,13 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Category --</option>
+<<<<<<< HEAD
           {categories.map((cat, index) => (
             <option key={index} value={cat}>
+=======
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+>>>>>>> b600972 (feat: add internship frontend code for Oringo project)
               {cat}
             </option>
           ))}
@@ -123,6 +149,7 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Product --</option>
+<<<<<<< HEAD
           {filteredProducts.length > 0 ? (
             filteredProducts.map((prod) => (
               <option key={prod.id} value={prod.name}>
@@ -132,6 +159,13 @@ export default function QuotationForm({ categories, products }) {
           ) : (
             <option disabled>No products available</option>
           )}
+=======
+          {filteredProducts.map((prod) => (
+            <option key={prod.id} value={prod.name}>
+              {prod.name}
+            </option>
+          ))}
+>>>>>>> b600972 (feat: add internship frontend code for Oringo project)
         </select>
 
         <input
