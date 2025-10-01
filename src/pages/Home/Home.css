@@ -1,0 +1,279 @@
+/* ========== Global Layout ========== */
+.home-container {
+  background-color: #fff;
+  margin: 0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Keep header/footer always on top */
+footer,
+header {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* ========== Parallax Section ========== */
+.parallax-section {
+  width: 100%;
+  min-height: 700px;
+  background: rgba(242, 240, 241, 1);
+  margin-top: 45px;
+  padding: 7% 0 0 7%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.international-star-section {
+  display: flex;
+}
+
+.oringo-section {
+  background: rgba(242, 240, 241, 1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  position: relative;
+}
+
+.Title-Field {
+  font-size: 60px;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+}
+
+.text-field {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.your-class {
+  width: 23%;
+  border-radius: 40px;
+  border: #000;
+}
+
+/* ========== Buttons ========== */
+.shopnow-button {
+  display: inline-block;
+  width: fit-content;
+  padding: 15px 60px;
+  border-radius: 30px;
+  color: #fff;
+  background: #000;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.shopnow-button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ========== Stats Section ========== */
+.stats-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.stats-row h2 {
+  margin: 0;
+}
+
+.vertical-line {
+  width: 2px;
+  height: auto;
+  /* matches content */
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Star Shapes ========== */
+.star-shape,
+.star-shape-2 {
+  background: #000;
+  clip-path: polygon(50% 0%,
+      70% 30%,
+      100% 50%,
+      70% 70%,
+      50% 100%,
+      30% 70%,
+      0% 50%,
+      30% 30%);
+}
+
+.star-shape {
+  width: 56px;
+  height: 75px;
+}
+
+.star-shape-2 {
+  width: 104px;
+  height: 140px;
+}
+
+.small-star-shape {
+  position: relative;
+  bottom: 31px;
+  left: 53px;
+}
+
+.star-section {
+  position: absolute;
+  right: 150px;
+  transform: translateX(-11rem);
+}
+
+/* ========== Titles & Animations ========== */
+.title-animate {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ff6f61, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.subtitle-animate {
+  font-size: 1rem;
+  color: #e0e0e0;
+  opacity: 0.85;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px #ff6f61);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px #ffcc70);
+  }
+}
+
+/* ========== Gradient Separator ========== */
+.gradient-separator {
+  width: 80%;
+  height: 8px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  background: linear-gradient(270deg, #f5a9cf, #7368c0, #7ee2b3, #5a99a5);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========== Feature Cards ========== */
+.feature-card {
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.07);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* ========== Testimonials ========== */
+.testimonial-compact {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.testimonial-bg {
+  background-image: url("../../assets/testimonials-bg.jpg");
+}
+
+/* ========== Buttons Wrapper ========== */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .parallax-section {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .Title-Field {
+    font-size: 2rem;
+  }
+
+  .title-animate {
+    font-size: 1.5rem;
+  }
+
+  .subtitle-animate {
+    font-size: 0.9rem;
+  }
+
+  .btn-wrapper button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .feature-card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-section {
+    min-height: 250px;
+    padding: 1rem;
+  }
+
+  .title-animate {
+    font-size: 1.3rem;
+  }
+
+  .subtitle-animate {
+    font-size: 0.85rem;
+  }
+}
+
+/* Container for all New Arrivals cards */
+.new-arrivals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* Optional: responsive for smaller screens */
+@media (max-width: 1024px) {
+  .new-arrivals-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .new-arrivals-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}

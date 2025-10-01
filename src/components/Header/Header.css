@@ -1,0 +1,147 @@
+/* 🌈 Navbar Gradient Background */
+.bg-gradient-primary {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    #0056b3 40%,
+    #003d80 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🖼️ Logo Styling */
+.logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: invert(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.8);
+}
+
+/* 🔗 Navbar Links */
+.nav-link-hover {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-hover:hover::after {
+  width: 100%;
+}
+
+/* 📌 Navbar Wrapper */
+.navbar {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* 🪟 Transparent Header (on top) */
+header {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  height: auto;
+}
+
+/* ✅ Collapse Fix */
+.navbar-expand-md .navbar-collapse {
+  flex: none !important;
+}
+
+/* 🔍 Search Bar */
+.search-bar-sector {
+  width: 1000px;
+  max-width: 1000px;
+  background-color: rgb(212, 209, 209);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 50px;
+  padding: 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 12px;
+  color: gray;
+}
+
+.search-input::placeholder {
+  color: gray;
+}
+
+/* 📦 Custom Navbar Style */
+.custom-navbar {
+  padding: 20px 20px 20px 100px !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/* 📱 Mobile First Adjustments */
+@media (max-width: 600px) {
+  .search-bar-sector {
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+/* 📱 Tablet & Small Desktop */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+  }
+
+  .nav-link-hover {
+    font-size: 0.95rem;
+  }
+}
+
+/* 🖥️ Desktop Enhancements */
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    justify-content: space-around !important;
+  }
+
+  .navbar-expand-md .navbar-nav {
+    flex-direction: row;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,60 @@
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;   /* Distance from bottom */
+  right: 20px;    /* Distance from right */
+  display: flex;
+  flex-direction: column; /* Stack label above icon */
+  align-items: center;
+  gap: 6px;
+  z-index: 9999; /* 🔹 Ensures it's always on top of footer */
+}
+
+/* Label Styling */
+.whatsapp-label {
+  background-color: #25d366;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* WhatsApp Icon Button */
+.whatsapp-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  animation: floatIcon 2s ease-in-out infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-btn svg {
+  font-size: 60px;
+  color: #25d366;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Hover effect */
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Floating animation */
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Hide label on mobile */
+@media (max-width: 768px) {
+  .whatsapp-label {
+    display: none;
+  }
+}
