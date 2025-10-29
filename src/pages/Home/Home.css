@@ -277,6 +277,7 @@ header {
     grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
 }
+<<<<<<< HEAD
 
 .info-card-container {
   display: grid;
@@ -302,3 +303,5 @@ header {
   object-fit: cover;  /* keeps aspect ratio */
 }
 
+=======
+>>>>>>> b6009721fda1d2d1c7208b717ec483229da05194

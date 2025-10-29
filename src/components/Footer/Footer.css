@@ -1,6 +1,9 @@
 /* Footer Main Container */
 .footer {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #0d1b2a, #1b263b, #1e3a5f);
+=======
+>>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
     /* background: linear-gradient(135deg, #0d1b2a, #1b263b, #1e3a5f); */
     background: rgba(240, 240, 240, 1);
     color: #fff;

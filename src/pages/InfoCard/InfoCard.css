@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .info-card-section {
     display: flex;
     flex-direction: column;
@@ -67,3 +68,21 @@
         font-size: 20px;
     }
 }
+=======
+.info-card-section{
+    display: flex;
+    width: auto;
+    color: black;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rating-star{
+    color:rgba(255, 198, 51, 1);
+}
+
+.rating-value{
+    color: rgba(0, 0, 0, 1);
+
+}
+>>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
