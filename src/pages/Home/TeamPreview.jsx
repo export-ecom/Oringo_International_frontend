@@ -10,6 +10,9 @@ const teamMembers = [
   { name: "Manjeet", role: "Head of Operations", image: t2 },
   { name: "Inayathulla SK", role: "Software Development Manager", image: t3 },
   { name: "Adhish P", role: "Lead Software Engineer", image: t4 },
+  { name: "Meharaj M", role: "Software Developer", image: t3 },
+  { name: "Bhanu Repala", role: "UI/UX", image: t4 },
+
 ];
 
 const Team = () => {

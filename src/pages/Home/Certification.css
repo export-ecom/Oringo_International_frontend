@@ -3,17 +3,11 @@
   text-align: center;
   padding: 80px 20px;
   border-radius: 24px;
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-=======
   /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   background: linear-gradient(90deg, #FFFFFF 8.17%, #7C7676 61.54%, #000000 100%);
   border: 1px solid rgba(0, 0, 0, 1);
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   position: relative;
 }
 
@@ -21,11 +15,7 @@
 .certifications-title {
   font-size: 2.5rem;
   font-weight: 700;
-<<<<<<< HEAD
-  color: #fff;
-=======
   color: black;
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   margin-bottom: 50px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
@@ -59,23 +49,15 @@
   height: 160px;
   border-radius: 50%;
   padding: 5px;
-<<<<<<< HEAD
-  background: rgba(255, 255, 255, 0.15);
-=======
   /* background: rgba(255, 255, 255, 0.15); */
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 10px auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-<<<<<<< HEAD
-  border: 3px solid #7efceb;
-=======
   /* border: 3px solid #7efceb; */
   /* background: white; */
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
 }
 
 .logo-container img {
@@ -99,11 +81,7 @@
 /* Label */
 .logo-card p {
   font-size: 1rem;
-<<<<<<< HEAD
-  color: #e0e0e0;
-=======
   color:black;
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   font-weight: 600;
   margin-top: 8px;
 }

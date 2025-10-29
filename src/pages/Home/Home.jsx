@@ -72,12 +72,13 @@ function Home() {
             </div>
           </div>
         </section>
-        <div style={{ display: 'flex', justifyContent: 'space-evenly', paddingTop: '50px' }}>
+        <div className="info-card-container">
           <InfoCard image={Foods} title="Foods" rating={3.5} />
           <InfoCard image={Poojasamagri} title="PoojaSamagri" rating={4.5} />
           <InfoCard image={Handicrafts} title="HandiCrafts" rating={2.0} />
           <InfoCard image={Medicine} title="Medicine" rating={5.0} />
         </div>
+
         <div className="gradient-separator"></div>
         <div className="sales-discount-image">
           <img src={SalesDiscountImage}></img>
@@ -206,7 +207,7 @@ function Home() {
         <Certifications />
         <div className="gradient-separator"></div>
         <div>
-          <Feedback/>
+          <Feedback />
         </div>
         {/* <div  style={{ paddingLeft: "120px" , paddingRight:"120px" }}>
           <LatestOfferCart/>

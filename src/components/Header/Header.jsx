@@ -4,15 +4,6 @@ import "./Header.css";
 import { FaWhatsapp, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logoOrg3.png";
-<<<<<<< HEAD
-
-function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <header>
-            <nav className="navbar navbar-expand-md navbar-dark bg-gradient-primary fixed-top shadow-sm px-3">
-=======
 import searchimage from "../../assets/searchimg.png";
 import ProfileImg from "../../assets/ProfileImg.png";
 import Brightness from "../../assets/Brightness.png";
@@ -33,7 +24,6 @@ function Header() {
         <header>
             <nav className="navbar navbar-expand-md navbar-light fixed-top custom-navbar">
 
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
                 {/* Brand Logo */}
                 <Link className="navbar-brand d-flex align-items-center" to="/">
                     <img
@@ -55,11 +45,6 @@ function Header() {
                 {/* Navigation Links */}
                 <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
                     <ul className="navbar-nav ms-auto align-items-md-center">
-<<<<<<< HEAD
-                        {[
-                            { name: "Home", to: "/" },
-                            { name: "Products", to: "/products" },
-=======
                         <li className="nav-item d-flex align-items-center">
                             <button
                                 className="nav-link nav-link-hover d-flex align-items-center border-0 bg-transparent"
@@ -84,7 +69,6 @@ function Header() {
                             )}
                         </li>
                         {[
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
                             { name: "About", to: "/about" },
                             { name: "Blog/News", to: "/blog" },
                             { name: "Contact Us", to: "/contact" },
@@ -95,20 +79,6 @@ function Header() {
                                 </Link>
                             </li>
                         ))}
-<<<<<<< HEAD
-
-                        <li className="nav-item ms-3">
-                            <Link
-                                to="/cart"
-                                className="nav-link nav-link-hover d-flex align-items-center"
-                            >
-                                <FaShoppingCart size={26} className="me-1" />
-                                Cart
-                            </Link>
-                        </li>
-
-=======
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
                         {/* <li className="nav-item ms-2">
                             <a
                                 className="nav-link nav-link-hover d-flex align-items-center"
@@ -122,8 +92,6 @@ function Header() {
                         </li> */}
                     </ul>
                 </div>
-<<<<<<< HEAD
-=======
                 <div className="search-section">
                     <form className="search-bar-sector" onSubmit={handleSearch}>
                         <img src={searchimage} alt="Search icon" className="w-6 h-6" />
@@ -150,7 +118,6 @@ function Header() {
                 </div>
                 <img src={Brightness} alt="brightness" className="w-6 h-6" />
 
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
             </nav>
 
             {/* Floating WhatsApp Button */}

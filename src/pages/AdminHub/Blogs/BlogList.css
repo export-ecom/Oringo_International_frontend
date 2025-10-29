@@ -1,0 +1,118 @@
+.blog-management-container {
+  padding: 20px;
+  position: relative;
+}
+
+/* Header */
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add-blog-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.blog-list {
+  margin-top: 20px;
+}
+
+.blog-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.blog-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.blog-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  max-width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  padding: 20px;
+  box-shadow: -2px 0px 10px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.blog-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.blog-form input,
+.blog-form textarea {
+  padding: 5px;
+  margin-top: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.save-btn {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-sidebar {
+    width: 100%;
+  }
+
+  .blog-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-actions {
+    margin-top: 10px;
+  }
+}

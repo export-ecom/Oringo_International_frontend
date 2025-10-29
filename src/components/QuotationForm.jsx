@@ -13,58 +13,6 @@ export default function QuotationForm({ categories, products }) {
   });
 
   const handleChange = (e) => {
-<<<<<<< HEAD
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-      ...(name === "category" ? { product: "" } : {}), // Reset product when category changes
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("http://127.0.0.1:8000/api/quotations/submit/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Quotation request submitted successfully!");
-        setFormData({
-          name: "",
-          contact: "",
-          email: "",
-          country: "",
-          category: "",
-          product: "",
-          quantity: "",
-        });
-      } else {
-        alert("Something went wrong! Please try again.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
-  };
-
-  // ✅ Log props inside component (correct way)
-  console.log("Products:", products);
-  console.log("Categories:", categories);
-  console.log("Selected Category:", formData.category);
-
-  // ✅ Filter products based on selected category
- const filteredProducts =
-  formData.category && formData.category !== "All"
-    ? products.filter((p) => 
-        p.category?.name?.toLowerCase() === formData.category?.toLowerCase()
-      )
-    : products;
-
-=======
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -82,7 +30,6 @@ export default function QuotationForm({ categories, products }) {
     formData.category && formData.category !== "All"
       ? products.filter((p) => p.category === formData.category)
       : products;
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
 
   return (
     <div className="quotation-form-container">
@@ -129,13 +76,8 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Category --</option>
-<<<<<<< HEAD
-          {categories.map((cat, index) => (
-            <option key={index} value={cat}>
-=======
           {categories.map((cat) => (
             <option key={cat} value={cat}>
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
               {cat}
             </option>
           ))}
@@ -149,23 +91,11 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Product --</option>
-<<<<<<< HEAD
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((prod) => (
-              <option key={prod.id} value={prod.name}>
-                {prod.name}
-              </option>
-            ))
-          ) : (
-            <option disabled>No products available</option>
-          )}
-=======
           {filteredProducts.map((prod) => (
             <option key={prod.id} value={prod.name}>
               {prod.name}
             </option>
           ))}
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
         </select>
 
         <input

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./Certification.css";
-<<<<<<< HEAD
-import badge from "../../assets/certificate.png";
-=======
+// import badge from "../../assets/certificate.png";
 // import badge from "../../assets/certificate.png";
 import badge from "../../assets/certificationofavailability.png";
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
 
 const certifications = [
   { name: "ISO 9001", logo: badge },

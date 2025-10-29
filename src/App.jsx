@@ -21,7 +21,7 @@ import CheckoutPage from './pages/Checkout/Checkout';
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
-
+import AdminHub from './pages/AdminHub/adminhub.jsx';
 
 
 
@@ -71,6 +71,7 @@ function App() {
           <Route path="/customer/profile" element={<CustomerProfileSettings />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin/profile" element={<AdminProfileSettings />} />
+          <Route path='/adminhub' element={<AdminHub/>}/>
 
         </Routes>
       </CartProvider>

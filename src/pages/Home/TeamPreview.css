@@ -3,27 +3,17 @@
   text-align: center;
   padding: 4rem 2rem;
   border-radius: 24px;
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  transition: background 0.5s ease-in-out;
-=======
   /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   transition: background 0.5s ease-in-out;
   background: rgba(240, 240, 240, 1)
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
 }
 
 /* Section Title */
 .team-title {
   font-size: 2.4rem;
   font-weight: 700;
-<<<<<<< HEAD
-  color: #fff;
-=======
   /* color: #fff; */
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   margin-bottom: 3.5rem;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
@@ -55,16 +45,10 @@
 
 /* Card */
 .team-card {
-<<<<<<< HEAD
-  background: rgba(255, 255, 255, 0.15);
-  /* glassy look */
-  backdrop-filter: blur(12px);
-=======
   /* background: rgba(255, 255, 255, 0.15); */
   /* glassy look */
   backdrop-filter: blur(12px);
   background: black;
->>>>>>> b600972 (feat: add internship frontend code for Oringo project)
   padding: 2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);

@@ -1,18 +1,13 @@
-// src/api/cartApi.js
-import API from "./api";
+import axios from "axios";
 
-export const apiAddToCart = (productId, quantity = 1) => {
-    return API.post("/cart/", { product: productId, quantity });
-};
+const API_URL = import.meta.env.VITE_API_URL;
 
-export const apiGetCart = () => {
-    return API.get("/cart/");
-};
-
-export const apiRemoveFromCart = (cartId) => {
-    return API.delete(`/cart/${cartId}/`);
-};
-
-export const apiUpdateQuantity = (cartId, quantity) => {
-    return API.patch(`/cart/${cartId}/`, { quantity });
+export const apiGetCart = async () => {
+  const token = localStorage.getItem("access_token");
+  
+  return await axios.get(`${API_URL}/cart/`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 };
