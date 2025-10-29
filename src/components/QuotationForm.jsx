@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import "./QuotationForm.css";
 
 export default function QuotationForm({ categories, products }) {
   const [formData, setFormData] = useState({
@@ -12,56 +13,23 @@ export default function QuotationForm({ categories, products }) {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-      ...(name === "category" ? { product: "" } : {}), // Reset product when category changes
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("http://127.0.0.1:8000/api/quotations/submit/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Quotation request submitted successfully!");
-        setFormData({
-          name: "",
-          contact: "",
-          email: "",
-          country: "",
-          category: "",
-          product: "",
-          quantity: "",
-        });
-      } else {
-        alert("Something went wrong! Please try again.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
+    console.log("Quotation Request:", formData);
+    alert("Quotation request submitted!");
   };
 
-  // ✅ Log props inside component (correct way)
-  console.log("Products:", products);
-  console.log("Categories:", categories);
-  console.log("Selected Category:", formData.category);
-
-  // ✅ Filter products based on selected category
- const filteredProducts =
-  formData.category && formData.category !== "All"
-    ? products.filter((p) => 
-        p.category?.name?.toLowerCase() === formData.category?.toLowerCase()
-      )
-    : products;
-
+  // Filter products based on selected category
+  const filteredProducts =
+    formData.category && formData.category !== "All"
+      ? products.filter((p) => p.category === formData.category)
+      : products;
 
   return (
     <div className="quotation-form-container">
@@ -108,8 +76,8 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Category --</option>
-          {categories.map((cat, index) => (
-            <option key={index} value={cat}>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
               {cat}
             </option>
           ))}
@@ -123,15 +91,11 @@ export default function QuotationForm({ categories, products }) {
           required
         >
           <option value="">-- Select Product --</option>
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((prod) => (
-              <option key={prod.id} value={prod.name}>
-                {prod.name}
-              </option>
-            ))
-          ) : (
-            <option disabled>No products available</option>
-          )}
+          {filteredProducts.map((prod) => (
+            <option key={prod.id} value={prod.name}>
+              {prod.name}
+            </option>
+          ))}
         </select>
 
         <input

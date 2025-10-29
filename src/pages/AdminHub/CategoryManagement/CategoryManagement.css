@@ -1,0 +1,168 @@
+/* ===========================
+   Category Management Styles
+=========================== */
+
+.category-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.category-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* ======= Add/Edit Form ======= */
+.category-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.category-form input {
+  flex: 1 1 250px;
+  min-width: 200px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 38px; /* ✅ Fix input height to avoid tall boxes on mobile */
+}
+
+.category-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+  height: 38px; /* ✅ same height as inputs for alignment */
+}
+
+
+.category-form button:hover {
+  background: #1e40af;
+}
+
+/* ======= Table ======= */
+.category-table {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scroll on mobile */
+}
+
+.category-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* keeps table readable */
+}
+
+.category-table th,
+.category-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.category-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.category-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ======= Action Buttons ======= */
+.category-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* ===========================
+   📱 Responsive (Mobile)
+=========================== */
+@media (max-width: 640px) {
+  .category-container {
+    margin: 10px;
+    padding: 16px;
+  }
+
+  .category-title {
+    font-size: 1.4rem;
+  }
+
+    .category-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .category-form input,
+  .category-form button {
+    width: 100%;
+    height: 38px; /* ✅ uniform height for mobile */
+    font-size: 14px;
+  }
+
+  .category-table table {
+    min-width: 100%;
+    font-size: 13px;
+  }
+
+  .category-table th,
+  .category-table td {
+    padding: 8px;
+  }
+
+  .category-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}

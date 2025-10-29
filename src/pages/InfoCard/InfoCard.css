@@ -1,0 +1,88 @@
+<<<<<<< HEAD
+.info-card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 320px; /* limits card size for larger screens */
+    margin: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    gap: 12px;
+}
+
+/* Image responsiveness */
+.info-card-section img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Title */
+.info-card-section h3 {
+    font-size: 28px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+/* Rating styles */
+.rating-star {
+    color: rgba(255, 198, 51, 1);
+    font-size: 20px;
+}
+
+.rating-value {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+    .info-card-section {
+        max-width: 260px;
+        padding: 12px;
+    }
+
+    .info-card-section h3 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .info-card-section {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .info-card-section img {
+        max-width: 100%;
+    }
+
+    .info-card-section h3 {
+        font-size: 20px;
+    }
+}
+=======
+.info-card-section{
+    display: flex;
+    width: auto;
+    color: black;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rating-star{
+    color:rgba(255, 198, 51, 1);
+}
+
+.rating-value{
+    color: rgba(0, 0, 0, 1);
+
+}
+>>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
