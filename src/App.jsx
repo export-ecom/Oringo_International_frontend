@@ -21,11 +21,7 @@ import CheckoutPage from './pages/Checkout/Checkout';
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
-<<<<<<< HEAD
-import AdminHub from './pages/AdminHub/adminhub.jsx';
-=======
 
->>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
 
 
 
@@ -75,10 +71,6 @@ function App() {
           <Route path="/customer/profile" element={<CustomerProfileSettings />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin/profile" element={<AdminProfileSettings />} />
-<<<<<<< HEAD
-          <Route path='/adminhub' element={<AdminHub/>}/>
-=======
->>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
 
         </Routes>
       </CartProvider>

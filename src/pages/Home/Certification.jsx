@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import "./Certification.css";
-// import badge from "../../assets/certificate.png";
-<<<<<<< HEAD
-// import badge from "../../assets/certificate.png";
-=======
->>>>>>> b6009721fda1d2d1c7208b717ec483229da05194
-import badge from "../../assets/certificationofavailability.png";
+import badge from "../../assets/certificate.png";
 
 const certifications = [
   { name: "ISO 9001", logo: badge },
